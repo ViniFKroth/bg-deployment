@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'docker build -t bgdeploy .'
+        sh 'sudo docker build -t bgdeploy .'
       }
     }
 
