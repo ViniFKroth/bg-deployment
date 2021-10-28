@@ -1,5 +1,11 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      image 'openjdk:11'
+      args '-p 8080:8080'
+    }
+
+  }
   stages {
     stage('Build') {
       steps {
